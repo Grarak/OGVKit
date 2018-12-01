@@ -106,7 +106,7 @@ static void OGVAudioFeederPropListener(void *data, AudioQueueRef queue, AudioQue
         samplesPlayed = 0;
         
         sampleSize = sizeof(Float32);
-        bufferSize = 1024;
+        bufferSize = 4096;
         bufferByteSize = bufferSize * sampleSize * format.channels;
 
         circularBuffer = (Float32 *)malloc(circularBufferSize * sampleSize * format.channels);
