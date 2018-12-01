@@ -164,6 +164,15 @@ static BOOL OGVPlayerViewDidRegisterIconFont = NO;
     }
 }
 
+- (float)duration
+{
+    if (state) {
+        return state.duration;
+    } else {
+        return 0;
+    }
+}
+
 -(void)layoutSubviews
 {
     [super layoutSubviews];
@@ -373,7 +382,7 @@ static BOOL OGVPlayerViewDidRegisterIconFont = NO;
 
 -(void)appDidEnterBackground:(id)obj
 {
-    [self pause];
+    //[self pause];
 }
 
 -(void)stopTimeTimer

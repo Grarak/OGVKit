@@ -78,6 +78,7 @@
     }
 }
 
+#ifdef OGVKIT_HAVE_ENCODER
 - (OGVMuxer *)muxerForType:(OGVMediaType *)mediaType
 {
     // hack
@@ -105,5 +106,6 @@
     return nil;
 #endif
 }
+#endif
 
 @end

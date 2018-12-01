@@ -75,9 +75,11 @@
  */
 - (OGVDecoder *)decoderForType:(OGVMediaType *)mediaType;
 
+#ifdef OGVKIT_HAVE_ENCODER
 - (OGVMuxer *)muxerForType:(OGVMediaType *)mediaType;
 - (OGVVideoEncoder *)videoEncoderForType:(OGVMediaType *)mediaType format:(OGVVideoFormat *)format options:(NSDictionary *)options;
 - (OGVAudioEncoder *)audioEncoderForType:(OGVMediaType *)mediaType format:(OGVAudioFormat *)format options:(NSDictionary *)options;
+#endif
 
 /**
  * The logger; can be set to override the default one or its settings.

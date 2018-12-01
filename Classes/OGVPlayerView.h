@@ -58,6 +58,7 @@
 
 @property (readonly) BOOL paused;
 @property (readonly) float playbackPosition;
+@property (readonly) float duration;
 
 -(void)play;
 -(void)pause;
